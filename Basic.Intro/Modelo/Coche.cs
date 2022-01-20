@@ -36,6 +36,7 @@ namespace Basic.Intro.Modelo
         public Color Color { get; set; }
         public Motor Motor { get; set; }
         public Cambio Cambio { get; set; }
+        public string Marca { get; set; }
 
         #endregion
 
@@ -65,6 +66,11 @@ namespace Basic.Intro.Modelo
         {
             if (vehiculo is Coche)
                 Console.WriteLine("El " + vehiculo.Marca + "|" + vehiculo.Modelo + " es un coche");
+        }
+
+        public void Arrancar()
+        {
+            throw new NotImplementedException();
         }
 
         #endregion

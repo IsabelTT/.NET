@@ -7,7 +7,7 @@ namespace Basic.Intro
     {
         static void Main(string[] args)
         {
-            Vehiculo vehiculo = new Vehiculo("Cosa");
+            //Vehiculo vehiculo = new Vehiculo("Cosa");
 
             IntroMetodos metodos = IntroMetodos.Instance;
             metodos.Metodo(null);
