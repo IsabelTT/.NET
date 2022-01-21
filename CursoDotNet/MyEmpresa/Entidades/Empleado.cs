@@ -174,7 +174,21 @@ namespace MyEmpresa.Entidades
 
         public override string ToString()
         {
-            return $"{nameof(NIF)}: {NIF}\n{nameof(Name)}: {Name}\n{nameof(FirstLastName)}: {FirstLastName}\n{nameof(SecondLastName)}: {SecondLastName}\n{nameof(Birth)}: {Birth:yy/MM/dd}\nTiene {GetAge(Birth)} años {(Phone == null ? "Sin telefono" : Phone.ToString())}\n{(Boss ? "Jefe" : "Empleado")}";
+            return $"{nameof(NIF)}: {NIF}\n{nameof(Name)}: {Name}\n{nameof(FirstLastName)}: {FirstLastName}\n{nameof(SecondLastName)}: {SecondLastName}\n{nameof(Birth)}: {Birth:yy/MM/dd}\nTiene {GetAge(Birth)} años {(Phone == null ? "Sin telefono" : Phone.ToString())}\n{(Boss ? "Jefe" : "Empleado")}\n";
+            //return $"{nameof(NIF)}: {NIF}\n";
+        }
+
+        //Para el correcto funcionamiento al agregar elementos unicos en un HashSet debemos sobreescribir los metodos GetHashCode y Equals
+        //Sobreescribir metodo GetHashCode
+        public override int GetHashCode()
+        {
+            return NIF.ToLower().GetHashCode();
+        }
+
+        //Sobreescribir metodo Equals
+        public override bool Equals(object obj)
+        {
+           return GetHashCode() == obj.GetHashCode();
         }
 
         public static void PrintAll(List<Empleado> empleados)
