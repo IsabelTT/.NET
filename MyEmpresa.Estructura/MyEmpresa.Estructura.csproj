@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Configurations>Debug;Release;Release_Empresa01;Release_Empresa02</Configurations>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MyEmpresa.Model\MyEmpresa.Model.csproj" />
+  </ItemGroup>
+
+</Project>

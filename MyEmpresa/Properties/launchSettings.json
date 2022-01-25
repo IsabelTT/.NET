@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "MyEmpresa": {
+      "commandName": "Project",
+      "commandLineArgs": "E"
+    }
+  }
+}

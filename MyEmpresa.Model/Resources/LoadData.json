@@ -1,0 +1,96 @@
+[
+  {
+    "Id": "{F2724985-83C6-47B1-ABD2-8079B47B2187}",
+    "Nombre": "Div01",
+    "Descripcion": "Division 01",
+    "FechaCreacion": "01/01/2022",
+    "Areas": [
+      {
+        "Id": "{79C7D757-5635-4EE7-9EBB-5C6687E099D8}",
+        "Nombre": "Ar01",
+        "Descripcion": "Area 01",
+        "FechaCreacion": "01/01/2022",
+        "Zonas": [
+          {
+            "Id": "{BA1BA133-F437-4EB9-8073-ADEF19B8A66E}",
+            "Nombre": "Zon01",
+            "Descripcion": "Zona 01",
+            "FechaCreacion": "01/01/2022"
+          },
+          {
+            "Id": "{A85D5F17-DBFA-4ED6-9620-1A88CABA060F}",
+            "Nombre": "Zon02",
+            "Descripcion": "Zona 02",
+            "FechaCreacion": "01/01/2022"
+          }
+        ]
+      },
+      {
+        "Id": "{B201F4CD-27E5-4983-95F5-E958CCE17917}",
+        "Nombre": "Ar02",
+        "Descripcion": "Area 02",
+        "FechaCreacion": "01/01/2022",
+        "Zonas": [
+          {
+            "Id": "{75613C14-2D9A-4AF3-A764-1853E08B3989}",
+            "Nombre": "Zon03",
+            "Descripcion": "Zona 03",
+            "FechaCreacion": "01/01/2022"
+          },
+          {
+            "Id": "{649EAC70-025D-4014-A924-F24B76D3CC71}",
+            "Nombre": "Zon04",
+            "Descripcion": "Zona 04",
+            "FechaCreacion": "01/01/2022"
+          },
+          {
+            "Id": "{AF78D797-A088-4F3F-B8DC-A9D17040F4DC}",
+            "Nombre": "Zon05",
+            "Descripcion": "Zona 05",
+            "FechaCreacion": "01/01/2022"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Id": "{450F3B84-2070-4CC7-B73D-D6118E4554C7}",
+    "Nombre": "Div02",
+    "Descripcion": "Division 02",
+    "FechaCreacion": "01/01/2022",
+    "Areas": [
+      {
+        "Id": "{D43C2BBD-8FA0-48E2-8632-B4B7EA026DC8}",
+        "Nombre": "Ar03",
+        "Descripcion": "Area 03",
+        "FechaCreacion": "01/01/2022",
+        "Zonas": [
+          {
+            "Id": "{BAB9C191-B50B-4C82-93D2-B89BF638FB20}",
+            "Nombre": "Zon06",
+            "Descripcion": "Zona 06",
+            "FechaCreacion": "01/01/2022"
+          },
+          {
+            "Id": "{DE1EDF61-C01B-45FF-AF63-EC38B844F91B}",
+            "Nombre": "Zon07",
+            "Descripcion": "Zona 07",
+            "FechaCreacion": "01/01/2022"
+          },
+          {
+            "Id": "{88DF8977-3D8D-497F-B602-D41AAD6B8FDF}",
+            "Nombre": "Zon08",
+            "Descripcion": "Zona 08",
+            "FechaCreacion": "01/01/2022"
+          },
+          {
+            "Id": "{4FAFD98C-D68F-427A-8B6A-8D481E46BE8D}",
+            "Nombre": "Zon09",
+            "Descripcion": "Zona 09",
+            "FechaCreacion": "01/01/2022"
+          }
+        ]
+      }
+    ]
+  }
+]
