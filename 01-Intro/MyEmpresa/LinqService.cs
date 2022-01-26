@@ -26,9 +26,30 @@ namespace MyEmpresa
                 emp5,
                 emp6,
                 emp7,
+            };
+
+            var mayores = GetMayoresDe(empleados.ToHashSet(), 40);
+
+            HashSet<Entidades.Empleado> empleados1 = new HashSet<Entidades.Empleado> {
+                emp1,
+                emp2,
+                emp3,
+                emp4,
+                emp5,
+                emp6,
+                emp7,
+            };
+            var mayores1 = GetMayoresDe(empleados1, 40);
+
+            List<Entidades.Empleado> empleados2 = new List<Entidades.Empleado> {
+                emp1,
+                emp6,
+                emp7,
                 emp8,
                 emp9
             };
+
+            var subconjunto = empleados2.Where(e => empleados.Contains(e));
 
             //lambda
             //query syntax
@@ -50,6 +71,34 @@ namespace MyEmpresa
 
             //method syntax
 
+            int page = 2;
+            IEnumerable<EmpleadoLite> emps2 = empleados.Select(e => EmpleadoMapper.ToEmpleadoLite(e))
+                .Where(e => e.Edad > 40) 
+                .OrderBy(e => e.Nombre);
+
+            var cvf = empleados.OrderBy(e => e.Birth).First(e => e.Age > 40);
+            if (cvf == null)
+            {
+
+            }
+
+            bool existe = empleados.Any(e => e.NIF == "23423446G");
+            if (existe)
+            {
+                var empSingle = empleados.Single(e => e.NIF == "23423446G");
+            }
+
+            bool todos = empleados.All(e => e.Phone != null);
+
+            var dentro = empleados.Contains(new Entidades.Empleado("23423446G", "", DateTime.Now));
+
+            var conteo = empleados.Count();
+            var sum = empleados.Sum(e => e.Salario);
+            var mediaSalario = empleados.Average(e => e.Salario);
+            var mediaEdad = empleados.Average(e => e.Age);
+
+            var salarioMax = empleados.Max(e => e.Salario);
+            var salarioMin = empleados.Min(e => e.Salario);
         }
 
         private class EmpleadoLite
@@ -72,6 +121,11 @@ namespace MyEmpresa
             {
                 return new EmpleadoLite($"{emp.Name} {emp.FirstLastName} {emp.SecondLastName}", emp.Age, emp.Phone);
             }
+        }
+
+        private static IEnumerable<Entidades.Empleado> GetMayoresDe(HashSet<Entidades.Empleado> empleados, int edad)
+        {
+            return empleados.Where(e => e.Age > edad);
         }
     }
 }

@@ -105,6 +105,7 @@ namespace MyEmpresa.Entidades
                 boss = value;
             }
         }
+        public decimal Salario { get; set; }
 
         #endregion
 
@@ -188,7 +189,7 @@ namespace MyEmpresa.Entidades
         //Sobreescribir metodo Equals
         public override bool Equals(object obj)
         {
-           return GetHashCode() == obj.GetHashCode();
+            return GetHashCode() == obj.GetHashCode();
         }
 
         public static void PrintAll(List<Empleado> empleados)
