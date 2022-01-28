@@ -7,7 +7,7 @@ namespace MyEmpresa.Estructura
 {
     public sealed class Division : Organizacion, IOrganizacion
     {
-        public List<Area> Areas { get; set; }
+        public List<ISegundoNivel> SegundoNiveles { get; set; }
 
         public Division() : base()
         { }
@@ -19,7 +19,7 @@ namespace MyEmpresa.Estructura
 
         public Division(string nombre, string descripcion, List<Area> areas) : base(nombre, descripcion)
         {
-            Areas = areas;
+            SegundoNiveles = areas.Cast<ISegundoNivel>().ToList();
         }
 
         public override void Crear()
@@ -28,11 +28,11 @@ namespace MyEmpresa.Estructura
 
             var insert = $"insert Division (Id, Nombre, Descripcion, FechaCreacion) values ({Id}, {Nombre}, {Descripcion}, {FechaCreacion})";
 
-            if (Areas.Any())
+            if (SegundoNiveles.Any())
             {
-                foreach (var area in Areas)
+                foreach (var area in SegundoNiveles)
                 {
-                    area.Crear();
+                    //area.Crear();
                 }
             }
         }

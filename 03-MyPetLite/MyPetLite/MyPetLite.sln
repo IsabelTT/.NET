@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32106.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyPetLite.BackEnd", "MyPetLite.BackEnd\MyPetLite.BackEnd.csproj", "{76EA0B0F-70B0-448F-8ADB-E0E14C6F6565}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyPetLite.Tests", "MyPetLite.Tests\MyPetLite.Tests.csproj", "{243A35EE-A87B-456D-A791-80B83E3FD846}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{76EA0B0F-70B0-448F-8ADB-E0E14C6F6565}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76EA0B0F-70B0-448F-8ADB-E0E14C6F6565}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76EA0B0F-70B0-448F-8ADB-E0E14C6F6565}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76EA0B0F-70B0-448F-8ADB-E0E14C6F6565}.Release|Any CPU.Build.0 = Release|Any CPU
+		{243A35EE-A87B-456D-A791-80B83E3FD846}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{243A35EE-A87B-456D-A791-80B83E3FD846}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{243A35EE-A87B-456D-A791-80B83E3FD846}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{243A35EE-A87B-456D-A791-80B83E3FD846}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FD42F2F3-7C89-45B3-89BB-8AE5B66C8864}
+	EndGlobalSection
+EndGlobal

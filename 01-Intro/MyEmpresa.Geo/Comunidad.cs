@@ -5,7 +5,7 @@ namespace MyEmpresa.Geo
 {
     public class Comunidad: MyEmpresa.Model.Organizacion, MyEmpresa.Model.IOrganizacion
     {
-        public List<Provincia> Provincias { get; set; }
+        public List<Model.ISegundoNivel> SegundoNiveles { get; set; }
 
         public void Actualizar()
         {

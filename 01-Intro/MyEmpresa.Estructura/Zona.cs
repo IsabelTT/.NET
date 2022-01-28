@@ -7,7 +7,7 @@ namespace MyEmpresa.Estructura
 {
     public sealed class Zona : Organizacion, ITercerNivel
     {
-        public Area Area { get; set; }
+        public ISegundoNivel SegundoNivel { get; set; }
 
         public Zona() : base()
         { }
@@ -18,7 +18,7 @@ namespace MyEmpresa.Estructura
 
         public Zona(string nombre, string descripcion, Area area) : base(nombre, descripcion)
         {
-            Area = area;
+            SegundoNivel = area;
         }
 
         public override void UpdateFechaCreacion()
@@ -28,7 +28,7 @@ namespace MyEmpresa.Estructura
 
         public override void Crear()
         {
-            var insert = $"insert Zone (Id, Nombre, Descripcion, IdDivision, FechaCreacion) values ({Id}, {Nombre}, {Descripcion}, {Area.Id}, {FechaCreacion})";
+            var insert = $"insert Zone (Id, Nombre, Descripcion, IdDivision, FechaCreacion) values ({Id}, {Nombre}, {Descripcion}, {SegundoNivel.Id}, {FechaCreacion})";
         }
     }
 }

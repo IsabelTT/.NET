@@ -6,8 +6,8 @@ namespace MyEmpresa.Geo
 {
     public class Provincia : MyEmpresa.Model.Organizacion, Model.ISegundoNivel
     {  
-        public Comunidad Comunidad { get; set; }
-        public List<Ciudad> Ciudades { get; set; }
+        public Model.IOrganizacion Organizacion { get; set; }
+        public List<Model.ITercerNivel> TercerNiveles { get; set; }
 
         public override void Crear()
         {

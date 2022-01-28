@@ -7,8 +7,8 @@ namespace MyEmpresa.Estructura
 {
     public sealed class Area : Organizacion, ISegundoNivel
     {
-        public Division Division { get; set; }
-        public List<Zona> Zonas { get; set; }
+        public IOrganizacion Organizacion { get; set; }
+        public List<ITercerNivel> TercerNiveles { get; set; }
 
         public Area() : base()
         { }
@@ -19,29 +19,29 @@ namespace MyEmpresa.Estructura
 
         public Area(string nombre, string descripcion, Division division) : base(nombre, descripcion)
         {
-            Division = division;
+            Organizacion = division;
         }
 
         public Area(string nombre, string descripcion, List<Zona> zonas) : base(nombre, descripcion)
         {
-            Zonas = zonas;
+            TercerNiveles = zonas.Cast<ITercerNivel>().ToList();
         }
 
         public Area(string nombre, string descripcion, Division division, List<Zona> zonas) : base(nombre, descripcion)
         {
-            Division = division;
-            Zonas = zonas;
+            Organizacion = division;
+            TercerNiveles = zonas.Cast<ITercerNivel>().ToList();
         }
 
         public override void Crear()
         {
-            var insert = $"insert Area (Id, Nombre, Descripcion, IdDivision, FechaCreacion) values ({Id}, {Nombre}, {Descripcion}, {Division.Id}, {FechaCreacion})";
+            var insert = $"insert Area (Id, Nombre, Descripcion, IdDivision, FechaCreacion) values ({Id}, {Nombre}, {Descripcion}, {Organizacion.Id}, {FechaCreacion})";
 
-            if (Zonas.Any())
+            if (TercerNiveles.Any())
             {
-                foreach (var zona in Zonas)
+                foreach (var zona in TercerNiveles)
                 {
-                    zona.Crear();
+                    //zona.Crear();
                 }
             }
         }

@@ -2,7 +2,7 @@
   "profiles": {
     "MyEmpresa": {
       "commandName": "Project",
-      "commandLineArgs": "E"
+      "commandLineArgs": "E SqlServer"
     }
   }
 }
